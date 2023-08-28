@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>media queries</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    .container {
+        width: 100vw;
+        height: 100vh;
+        background: #0088cc;
+    }
+
+    .hero, .content {
+        display: grid;
+        grid-template-columns: auto auto;
+    }
+
+    .card {
+        background: #ffffff;
+        padding: 10px;
+        margin: 10px;
+    }
+
+    @media screen and (max-width: 767px) {
+        .content{
+            grid-template-columns: auto;
+        }
+
+        .hero{
+            display: flex;
+            flex-direction: column-reverse;
+        }
+
+        .card img{
+            width: 200px;
+        }
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div class="card-area">
+            <div class="hero">
+                <div class="card">
+                    <h1>Nama saya ihsan</h1>
+                </div>
+                <div class="card">
+                    <img src="hp1.png" width="200px" alt="" srcset="">
+                </div>
+            </div>
+            <div class="content">
+                <div class="card">
+                    <h1>card1</h1>
+                </div>
+                <div class="card">
+                    <h1>card1</h1>
+                </div>
+                <div class="card">
+                    <h1>card1</h1>
+                </div>
+                <div class="card">
+                    <h1>card1</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

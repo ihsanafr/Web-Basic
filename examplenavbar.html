@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            overflow: hidden;
+        }
+        .navbar{
+            width: 100vw;
+            height: 10vh;
+            background: blueviolet;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .nav-logo{
+            background: #0088cc00;
+        }
+        .nav-item{
+            background: rgba(255, 255, 255, 0);
+        }
+
+        .nav-link {
+            display: inline;
+            margin-left: 20px;
+        }
+        .nav-link a{
+            text-decoration: none;
+            color: #ffffff;
+        }
+        .toggle{
+            display: none;
+        }
+        .dropdown{
+            display: none;
+            position: absolute;
+            background: white;
+            width: 100%;
+            left: 0;
+            top: 65px;
+            padding: 10px;
+        }
+
+        .dropdown li {
+            list-style: none;
+        }
+        .dropdown li a{
+            text-decoration: none;
+        }
+
+        .toggle:hover .dropdown{
+            display: block;
+        }
+
+        @media screen and (max-width:768px){
+            .nav-item{
+                display: none;
+            }
+            .toggle{
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="nav-logo">
+            <h2>Logo saya</h2>
+        </div>
+        <div class="nav-item">
+            <ul>
+                <li class="nav-link"><a href="#">home</a></li>
+                <li class="nav-link"><a href="#">home</a></li>
+                <li class="nav-link"><a href="#">home</a></li>
+                <li class="nav-link"><a href="#">home</a></li>
+            </ul>
+        </div>
+        <div class="toggle">
+            <a href="#"><b>=</b></a>
+            <ul class="dropdown">
+                <li><a href="#">home</a></li>
+                <li><a href="#">home</a></li>
+                <li><a href="#">home</a></li>
+                <li><a href="#">home</a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
