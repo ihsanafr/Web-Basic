@@ -8,548 +8,7 @@
     <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@800&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            font-family: 'Poppins';
-            overflow-x: hidden;
-        }
-
-        .navbar {
-            width: 100vw;
-            height: 12vh;
-            background-color: #E4E6FF;
-            display: flex;
-        }
-
-        .navbar-brand {
-            width: 40%;
-            height: 100%;
-            display: flex;
-            margin-right: 60px;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .navbar-item {
-            width: 60%;
-            height: 100%;
-            display: flex;
-            justify-content: center;
-            margin-right: 30px;
-            padding-left: 60px;
-            align-items: center;
-        }
-
-        .list-item ul {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            text-align: center;
-        }
-
-        .list-item li {
-            display: inline-block;
-            margin-right: 30px;
-        }
-
-        .list-item a {
-            font-size: 20px;
-            font-weight: bold;
-            text-decoration: none;
-            color: #5E6AFF;
-            display: block;
-            position: relative;
-            padding: 4px 0;
-        }
-
-        .list-item a::before {
-            content: "";
-            width: 100%;
-            height: 4px;
-            position: absolute;
-            left: 0;
-            bottom: 0;
-            color: white;
-            transition: 0.5s transform ease;
-            transform: scale3d(0, 1, 1);
-        }
-
-        .list-item a:hover::before {
-            color: white;
-            transform: scale3d(1, 1, 1);
-        }
-
-        .list-item a::before {
-            color: white;
-            background: #5E6AFF;
-            transform-origin: 100% 50%;
-        }
-
-        .list-item a:hover::before {
-            transform-origin: 0 50%;
-        }
-
-        .toggle {
-            display: none;
-        }
-
-        .dropdown {
-            display: none;
-            position: absolute;
-            text-decoration: none;
-            background: white;
-            width: 90%;
-            left: 0;
-            top: 85px;
-            padding: 10px;
-        }
-
-        .dropdown li {
-            list-style: none;
-        }
-
-        .dropdown li a {
-            text-decoration: none;
-        }
-
-        .toggle:hover .dropdown {
-            display: block;
-        }
-
-        .hero {
-            width: 100vw;
-            margin-bottom: 0px;
-            height: 80vh;
-            background: #E4E6FF;
-            display: flex;
-            justify-content: space-around;
-            display: grid;
-            grid-template-columns: auto auto;
-        }
-
-        .hero-dekstop {
-            margin-bottom: 10px;
-            width: 100vw;
-            background: #E4E6FF;
-            display: grid;
-            grid-template-columns: auto auto;
-        }
-
-        .area-tittle {
-            margin-top: 100px;
-            margin-left: 150px;
-        }
-
-        .text-welcome {
-            color: #B6BBFF;
-            padding-left: 10px;
-            font-weight: 600;
-            font-size: 1.5em;
-            text-shadow: 5px 5px 10px #B6BBFF;
-
-        }
-
-        .text-title {
-            font-size: 4.5em;
-            height: 30vh;
-            color: #5e69ff;
-            font-weight: bold;
-            text-shadow: 5px 5px 10px #5e69ff75;
-        }
-
-        .text-title p {
-            padding: 10px;
-            line-height: 90px;
-        }
-
-        .text-tagline {
-            font-size: 1.4em;
-            font-weight: 600;
-            padding-left: 10px;
-            color: #B6BBFF;
-            text-shadow: 3px 3px 20px #b6bbffa0;
-        }
-
-        .button-explore {
-            margin-top: 20px;
-            padding-top: 30px;
-            height: 80px;
-        }
-
-        .btn-about {
-            color: #E4E6FF;
-            font-weight: bold;
-            font-size: 15px;
-            border-radius: 30px;
-            text-decoration: none;
-            background-color: #5E6AFF;
-            border: solid #5e69ff;
-            padding-right: 40px;
-            padding: 10px 20px;
-            transition: 0.4s;
-        }
-
-        .btn-about:hover {
-            border: solid #5e69ff;
-            background: none;
-            color: #5e69ff;
-        }
-
-        .btn-contact {
-            color: #5E6AFF;
-            font-weight: bold;
-            font-size: 15px;
-            border-radius: 30px;
-            text-decoration: none;
-            border: solid #5E6AFF;
-            padding: 10px 20px;
-            margin-left: 10px;
-            transition: 0.4s;
-        }
-
-        .btn-contact:hover {
-            background: #5E6AFF;
-            border: solid #5E6AFF;
-            color: #E4E6FF;
-        }
-
-        .img-brand {
-            margin-top: 70px;
-            margin-right: 60px;
-        }
-
-        .area-img {
-            display: flex;
-            justify-content: space-around;
-        }
-
-
-        .hero-about {
-            width: 100vw;
-            height: 80vh;
-            background: #E4E6FF;
-            background-size: cover;
-            display: flex;
-            justify-content: space-around;
-        }
-
-        .img-brand2 {
-            padding-left: 80px;
-            padding-top: 100px;
-        }
-
-        .area-tittle2 {
-            width: 50%;
-            padding: 80px;
-            margin-left: 20px;
-            background: #ffee0000;
-        }
-
-        .text-about {
-            color: #5e69ff;
-            font-weight: bold;
-            font-size: 2em;
-        }
-
-        .text-title2 {
-            font-size: 3em;
-            color: #E4E6FF;
-            text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.481);
-            font-family: Poppins;
-            font-weight: 800;
-            padding: 10px;
-            border-radius: 10px;
-            background-color: #5e69ff;
-            line-height: 75px;
-        }
-
-        .text-tagline2 {
-            font-size: 1em;
-            margin-top: 30px;
-            font-weight: 600;
-            color: #5e69ff;
-        }
-
-        .button-explore2 {
-            margin-top: 20px;
-            height: 70px;
-            padding-top: 30px;
-        }
-
-        .btn-port {
-            font-weight: bold;
-            text-decoration: none;
-            padding: 10px;
-            color: #5e69ff;
-            border: solid #5e69ff;
-            border-radius: 30px;
-            transition: 0.4s;
-        }
-
-        .btn-port:hover {
-            color: #E4E6FF;
-            background-color: #5e69ff;
-        }
-
-        .btn-contact2 {
-            font-weight: bold;
-            font-size: 1em;
-            margin: 10px;
-            border: solid #5e69ff;
-            text-decoration: none;
-            background-color: #5e69ff;
-            border-radius: 30px;
-            color: #E4E6FF;
-            padding: 10px;
-            padding-left: 15px;
-            padding-right: 15px;
-            margin-left: 10px;
-            transition: 0.4s;
-        }
-
-        .btn-contact2:hover {
-            background-color: #E4E6FF;
-            border: solid #5e69ff;
-            color: #5e69ff;
-        }
-
-        .hero-about-dekstop {
-            width: 100vw;
-            background: #E4E6FF;
-            background-size: cover;
-            display: flex;
-            justify-content: space-around;
-        }
-
-        .service-tittle {
-            margin-top: 0px;
-            width: 100vw;
-            height: 20vh;
-            justify-content: space-around;
-            background: #E4E6FF;
-            display: flex;
-            align-items: center;
-            flex-direction: column;
-        }
-
-        .service-text {
-            margin: 10px;
-            color: #e4e6ff;
-            border-radius: 20px;
-            box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.482);
-            background-color: #5e69ff;
-            align-items: center;
-            display: flex;
-            justify-content: center;
-            padding: 15px;
-            width: 500px;
-        }
-
-        .service-text-info {
-            margin-top: 10px;
-            color: #5E6AFF;
-            font-size: 1.5em;
-            font-weight: bold;
-            text-shadow: 5px 5px 15px rgba(0, 0, 0, 0.305);
-        }
-
-        .service-page {
-            margin-top: 0px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 100vw;
-            height: 90vh;
-            background: #E4E6FF;
-        }
-
-        .service-column {
-            justify-content: center;
-            display: flex;
-        }
-
-        .service1 {
-            margin: 20px;
-            padding: 30px;
-            align-items: center;
-            border-radius: 20px;
-            color: #5E6AFF;
-            padding-top: 90px;
-            justify-content: center;
-            box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.26);
-            background: #E4E6FF;
-            width: 190px;
-            height: 350px;
-            text-align: center;
-            transition: 0.6s;
-        }
-
-        .service1:hover {
-            background: #5e69ff;
-            color: #e4e6ff;
-        }
-
-        .service2 {
-            margin-right: 80px;
-            margin-left: 20px;
-            margin-bottom: 30px;
-            padding: 30px;
-            align-items: center;
-            border-radius: 20px;
-            color: #5E6AFF;
-            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.562);
-            background: #E4E6FF;
-            text-align: center;
-            transition: 0.6s;
-        }
-
-        .service2:hover {
-            background: #5e69ff;
-            color: #e4e6ff;
-        }
-
-        .contact-page {
-            width: 100vw;
-            height: 90vh;
-            background-color: #5e69ff;
-        }
-
-        .contact-tittle {
-            width: 100vw;
-            height: 30vh;
-            align-items: center;
-            flex-direction: column;
-            display: flex;
-            justify-content: space-around;
-            text-align: center;
-        }
-
-        .tittle-text {
-            font-weight: bold;
-            background: #E4E6FF;
-            color: #5E6AFF;
-            font-size: 1.5em;
-            border-radius: 20px;
-            box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.396);
-            padding: 20px;
-            width: 600px;
-        }
-
-        .tittle-info {
-            color: #e4e6ff;
-            font-weight: 600;
-            font-size: 1.3em;
-            margin-bottom: 20px;
-        }
-
-        .contact-map {
-            display: flex;
-            justify-content: center;
-
-        }
-
-        .contact-media {
-            margin-top: 20px;
-            display: flex;
-            justify-content: center;
-        }
-
-        .social-buttons {
-            margin: 20px;
-            text-decoration: none;
-            font-weight: 600;
-            color: #E4E6FF;
-            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.567);
-            transition: transform 0.4s ease-in-out;
-        }
-
-        .social-buttons:hover {
-            transform: scale(1.1);
-            color: white;
-        }
-
-        .footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 20px;
-            bottom: 0;
-            width: 96.9vw;
-        }
-        .hero-phone{
-            background: #e4e6ff;
-            justify-content: center;
-            align-items: center;
-            display: none;
-        }
-        .area-tittle2-phone{
-            margin-top: 10px;
-            width: 70vw;
-            text-align: center;
-            margin-left: 40px;
-        }
-        .text-title-phone{
-            font-size: 3em;
-            font-weight: bold;
-            color: #5E6AFF;
-            
-        }
-        .hero-about-phone {
-            width: 100vw;
-            height: 80vh;
-            background: #E4E6FF;
-            background-size: cover;
-            display: flex;
-            justify-content: space-around;
-            display: none;
-        }
-
-
-
-        @media screen and (max-width: 767px) {
-            .list-item {
-                display: none;
-            }
-
-            .toggle {
-                display: block;
-            }
-
-            .hero {
-                display: none;
-            }
-
-            .hero-about {
-                display: none;
-            }
-
-            .service-tittle {
-                display: none;
-            }
-
-            .service-page {
-                display: none;
-            }
-
-            .contact-page {
-                display: none;
-            }
-
-            .footer {
-                display: none;
-            }
-            .hero-phone{
-                display: block;
-            }
-            .hero-about-phone{
-                display: block;
-            }
-        
-
-        }
-    </style>
+    <link rel="stylesheet" href="index.css">
 </head>
 
 <body>
@@ -596,12 +55,12 @@
             </div>
             <div class="area-img">
                 <div class="img-brand">
-                    <img src="logoweb1.png" width="400px" alt="">
+                    <img src="homeimg.png" width="400px" alt="">
                 </div>
             </div>
         </div>
     </div>
-    <div class="hero-about">
+    <div class="hero-about" id="about-me"  >
         <div class="hero-about-dekstop">
             <div class="area-img">
                 <div class="img-brand2">
@@ -685,12 +144,12 @@
 
     </div>
     <div class="footer">
-        <p>copyright</p>
+        <p>© 2023 Ihsan ahmad. All right Reserved.</p>
     </div>
     <div class="hero-phone">
         <div class="area-img">
             <div class="img-brand">
-                <img src="logoweb1.png" width="250px" alt="">
+                <img src="homeimg.png" width="250px" alt="">
             </div>
         </div>
         <div class="area-tittle2-phone">
@@ -710,12 +169,12 @@
         </div>
     </div>
     <div class="hero-about-phone">
-        <div class="area-img">
-            <div class="img-brand2">
-                <img src="aboutme.png" width="400px" alt="">
+        <div class="area-img-phone">
+            <div class="img-brand2-phone">
+                <img src="aboutme.png" width="300px" alt="">
             </div>
         </div>
-        <div class="area-tittle2">
+        <div class="area-tittle2-phone">
             <div class="text-about">
                 <p>About Me</p>
             </div>
@@ -733,6 +192,62 @@
             </div>
         </div>
     </div>
+    <div class="service-tittle-phone">
+        <div class="service-text-phone">
+            <h3>My Experience & Skill</h3>
+        </div>
+        <div class="service-text-info-phone">
+            <p>I have some skills and experience <br>that might be useful for others</p>
+        </div>
+    </div>
+    <div class="service-page-phone">
+        <div class="service-column-phone">
+            <div class="service1-phone">
+                <img src="2d3d.png" width="60px">
+                <h2>2D & 3D Design</h2>
+                <p>I have some skills in the multimedia field, especially in making designs in 2d and 3d quality</p>
+            </div>
+            <div class="service1-phone">
+                <img src="web.png" width="60px">
+                <h2>Software Developer</h2>
+                <p>I have skills in programming, I can create a web or application using html, css, kotlin, java, and
+                    others</p>
+            </div>
+            <div class="service1-phone">
+                <img src="studyic.png" width="60px">
+                <h2>English Language</h2>
+                <p>I have sufficient skills in the field of English, I can carry out conversations, speeches, and others
+                    in English.</p>
+            </div>
+            <div class="service1-phone">
+                <img src="islamic.png" width="60px">
+                <h2>Islam Knowlage</h2>
+                <p>I have sufficient knowledge in the Islamic world, the science of aqidah, fiqh, hadith, and others.
+                </p>
+            </div>
+        </div>
+        <div class="contact-page-phone">
+            <div class="contact-tittle">
+                <div class="tittle-text-phone">Contact Me</div>
+                <div class="tittle-info">contact me for need information</div>
+            </div>
+            <div class="contact-map">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d253658.18637909877!2d106.68099138497846!3d-6.595962756985674!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69bc6e5be3d9bd%3A0x6b9881dabd801476!2sSMP-SMK%20IDN%20Boarding%20School!5e0!3m2!1sen!2sid!4v1692842561898!5m2!1sen!2sid"
+                    width="400" height="450" style="border-radius: 30px;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <div class="contact-media">
+                <a class="social-buttons" href="#">Facebook</a>
+                <a class="social-buttons" href="#">Youtube</a>
+                <a class="social-buttons" href="#">Instagram</a>
+            </div>
+            <div class="contact-media-phone">
+                <a class="social-buttons-phone" href="#">Linkedin</a>
+                <a class="social-buttons-phone" href="#">Gmail</a>
+            </div>
+    
+        </div>
 </body>
 
 </html>
