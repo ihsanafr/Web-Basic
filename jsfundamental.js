@@ -1,8 +1,5 @@
 // lets first code
 
-
-
-
 // Variable
 // deklarasi sebuah variable di js ada 4 cara
 
@@ -296,9 +293,61 @@
 
 // countable (for,foreach,repeat)
 
-for(let i = 0; i < 0; i--){
-    console.log(`angka ini akan diubah sebanyak `)
-}
+// for(let i = 1; i <= 20; i++){
+//     document.write(` ${i}`);
+// }
+
+// foreach
+
+// var mobil = ["toyota","honda","ferrari","volvo","zhong tong","suzuki"];
+
+// mobil.forEach((car) => {
+//     console.log(`mobil ini mereknya adalah ${car}`)
+// });
+
+// var motor =["mio","beat","vixion","nmax"];
+
+// motor.forEach((bike) => {
+//     console.log(`motor ini mereknya ${bike}`);
+// });
+
+// var nama =[
+//     "Abdurahman Ilyasa",
+//     "Ammar Zahran Syafiq",
+//     "Andy Taft",
+//     "Arkan Naufal Ardhani",
+//     "Azka Azkia Baiquni",
+//     "Azka Savir Fauzie",
+//     "Faris Dzu Khairil Muna",
+//     "Firja Abiyu Alhilali",
+//     "Haikal Al Fatih",
+//     "Ihsan Ahmad Fakhriansyah",
+//     "Mawaldy Adha Majid",
+//     "Muhammad Al Fathi Ahyan",
+//     "Muhammad Fahri Al Mauludy",
+//     "Muhammad Imamussajidin",
+//     "Muhammad Keenan Abigail",
+//     "Naufal Azriel Al Azizy",
+//     "Raihan Ksatria",
+//     "Reveeno Dhirgham Putra",
+//     "Rizqi Irkham Maulana",
+// ];
+// for(i = 1; i<= nama.length; )
+
+// nama.forEach(rows => {
+//     nomor = i++
+//     document.write("<h3>" + nomor+ ',' + rows + "</h3>");
+// });
 
 
 // uncountable (while,do/while,)
+
+
+var repeat = false;
+var hitung = 0;
+
+while (repeat) {
+    hitung++
+    repeat = confirm("apakah kamu akan mengulang ini");
+}
+alert(`anda sudah mengulang sebanyak ${hitung}`)
